@@ -20,4 +20,4 @@ jobs:
           script: |
             cd /opt/KroshFM
             git pull --ff-only origin main
-            pnpm install --frozen-lockfile
+            /home/KroshFM/.nvm/versions/node/v24.19.0/bin/pnpm install --frozen-lockfile
