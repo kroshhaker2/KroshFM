@@ -1,0 +1,12 @@
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8443:443"
+    volumes:
+      - ./nginx.conf.template:/etc/nginx/templates/default.conf.template:ro
+      - ./certs:/etc/nginx/certs:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      DOMAIN: ${DOMAIN}
