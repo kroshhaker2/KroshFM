@@ -23,5 +23,5 @@ jobs:
             nvm use 24
 
             cd /opt/KroshFM
-            git pull --ff-only origin main
+            git pull --ff-only origin dev
             pnpm install --frozen-lockfile
